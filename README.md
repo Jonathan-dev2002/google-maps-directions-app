@@ -2,9 +2,6 @@
 
 เว็บแอปพลิเคชันสำหรับค้นหาและแสดงผลเส้นทางบน Google Maps สร้างด้วย Node.js, Express.js และ EJS ซึ่งเป็นส่วนหนึ่งของการเรียนรู้และทดลองใช้งาน Google Maps Platform API
 
-![ภาพหน้าจอของโปรแกรม](https://i.imgur.com/28c062.jpg)
-*(แนะนำ: ให้คุณถ่ายภาพหน้าจอของโปรแกรมตอนทำงานเสร็จแล้ว และนำมาใส่แทนที่ลิงก์รูปภาพนี้)*
-
 ---
 
 ## ✨ คุณสมบัติหลัก (Features)
@@ -42,7 +39,7 @@
 
 1.  **Clone a repository** ของโปรเจกต์นี้
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    https://github.com/Jonathan-dev2002/google-maps-directions-app.git
     ```
 
 2.  **เข้าไปที่โฟลเดอร์โปรเจกต์**
