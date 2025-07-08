@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps API Test</title>
+  <style>
+    /* ตั้งค่าให้แผนที่แสดงผลเต็มหน้าจอ */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>แผนที่ทดสอบ (MVC + Express)</h1>
+  <div id="map"></div>
+
+  <script>
+    // ฟังก์ชันนี้จะถูกเรียกโดย Google Maps API เมื่อ script โหลดเสร็จ
+    function initMap() {
+      // 1. กำหนดตำแหน่งศูนย์กลางของแผนที่และ Marker
+      const mapCenter = { lat: 13.7563, lng: 100.5018 }; // กรุงเทพมหานคร
+      const markerPosition = { lat: 13.7567, lng: 100.5014 }; // อนุสาวรีย์ประชาธิปไตย
+
+      // 2. สร้างแผนที่ใหม่และใส่ใน div ที่มี id="map"
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15, // ระดับการซูม
+        center: mapCenter, // จุดศูนย์กลาง
+      });
+
+      // 3. สร้าง Marker ใหม่
+      const marker = new google.maps.Marker({
+        position: markerPosition,
+        map: map, // บอกให้ Marker นี้แสดงบนแผนที่ที่เราสร้าง
+        title: "อนุสาวรีย์ประชาธิปไตย", // ข้อความเมื่อเอาเมาส์ไปชี้
+      });
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<%= apiKey %>&callback=initMap">
+  </script>
+</body>
+</html>
